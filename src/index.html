@@ -1,0 +1,73 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="./index.html">Movie List</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#">Favorite</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<!-- Movie Data -->
+<div class="container mt-5">
+	<div class="row justify-content-between align-items-center mb-2">
+		<!-- Search Bar -->
+		<form class="form-inline" id="search-form">
+			<label class="sr-only" for="inlineFormInputName2">Search Keyword</label>
+			<input type="text" class="form-control mr-sm-2" id="inlineFormInputName2" placeholder="Keyword...">
+			<button type="submit" class="btn btn-primary" id="search-submit">Search</button>
+		</form>
+
+		<div class="showing-mode">
+			<i class="fa fa-th btn-mode p-2 border border-dark rounded" aria-hidden="true" data-mode="card"></i>
+			<i class="fa fa-bars btn-mode ml-1 p-2 border border-dark rounded" aria-hidden="true" data-mode="list"></i>
+		</div>
+	</div>
+	<!-- Render Movie List -->
+	<div class="row" id="data-panel">
+		<!-- renderMovieList() -->
+	</div>
+</div>
+<!-- Paginator -->
+<nav aria-label="Page navigation example">
+	<ul class="pagination justify-content-center mt-2" id="paginator">
+		<!-- renderPaginator() -->
+	</ul>
+</nav>
+
+<!-- Movie Modal-->
+<div class="modal fade" id="movie-modal" tabindex="-1" role="dialog" aria-labelledby="movie-modal-title" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="movie-modal-title"></h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body" id="movie-modal-body">
+				<div class="row">
+					<div class="col-sm-8" id="movie-modal-image">
+						<img src="" alt="movie-poster" class="img-fluid">
+					</div>
+					<div class="col-sm-4">
+						<p><em id="movie-modal-date"></em></p>
+						<p id="movie-modal-description"></p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
